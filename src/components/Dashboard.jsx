@@ -12,11 +12,9 @@ const Dashboard = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-100 relative">
         <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{ backgroundImage: "url('https://source.unsplash.com/random/1920x1080/?business,login')" }}></div>
         <div className="relative z-10 text-gray-900 text-center p-6 rounded-lg shadow-lg bg-white bg-opacity-90">
-          <h2 className="text-3xl font-bold mb-4">Welcome to Your Dashboard</h2>
-          <p className="mb-6">Please log in to access your personalized content and features.</p>
           <a 
             href="/login"
-            className="bg-orange-500 text-white py-3 px-6 rounded-lg hover:bg-orange-600 transition duration-300"
+            style={{ width: '100%', padding: '10px', backgroundColor: '#007BFF', color: '#fff', border: 'none'}}
           >
             Log In
           </a>

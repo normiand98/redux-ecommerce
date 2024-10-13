@@ -51,14 +51,14 @@
 
 /* Documentation link */
 .read-the-docs {
-  color: #2c3e50; /* Darker text for contrast */
+  color: #2c3e50; 
 }
 
 /* Body styling */
 body {
-  background-color: #ffffff; /* Light background */
-  color: #2f3640; /* Dark text color */
-  font-family: 'Lato', sans-serif; /* Changed to 'Lato' for a fresh modern feel */
+  background-color: #ffffff; 
+  color: #2f3640; 
+  font-family: 'Lato', sans-serif; 
 }
 
 /* Navbar */
