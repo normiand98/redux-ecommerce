@@ -12,7 +12,7 @@ const AdminPage = () => {
   const handleAddUser = () => {
     if (newUsername && newPassword) {
       const newUser = {
-        id: Date.now(), // Generate a unique ID for the new user
+        id: Date.now(),
         username: newUsername,
         password: newPassword,
         role: newRole,
@@ -35,24 +35,30 @@ const AdminPage = () => {
   };
 
   return (
-    <div className="admin-page p-8 bg-gray-100 min-h-screen">
-      <h2 className="text-4xl font-bold mb-6 text-black">Admin Dashboard</h2>
-      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Current Users</h3>
-      <ul className="mb-6 space-y-4">
+    <div className="admin-page" style={{ padding: '10px', maxWidth: '600px', margin: 'auto', fontFamily: 'Arial, sans-serif' }}>
+      <h2>Admin Dashboard</h2>
+
+      <h3>Manage Users</h3>
+      <ul style={{ padding: 0 }}>
         {users.map((user) => (
-          <li key={user.id} className="flex justify-between items-center p-4 bg-white text-black rounded-lg shadow-md">
-            <span className="text-lg">{user.username} ({user.role})</span>
-            <div className="flex items-center space-x-4">
+          <li key={user.id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
+            <span>{user.username} ({user.role})</span>
+            <div>
               <button 
                 onClick={() => handleDeleteUser(user.id)} 
-                className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out"
+                style={{ 
+                  backgroundColor: '#f44336', 
+                  color: '#fff', 
+                  border: 'none', 
+                  padding: '5px 10px', 
+                  cursor: 'pointer' 
+                }}
               >
-                Delete User
+                Delete
               </button>
               <select
                 value={user.role}
                 onChange={(e) => handleRoleChange(user.id, e.target.value)}
-                className="p-2 border border-gray-400 rounded-lg bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-orange-500"
               >
                 <option value="shopper">Shopper</option>
                 <option value="seller">Seller</option>
@@ -63,34 +69,37 @@ const AdminPage = () => {
         ))}
       </ul>
 
-      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Create New User</h3>
-      <div className="space-y-4">
+      <h3>Create New User</h3>
+      <div>
         <input
           type="text"
           placeholder="Username"
           value={newUsername}
           onChange={(e) => setNewUsername(e.target.value)}
-          className="p-3 border border-gray-400 rounded-lg bg-gray-200 text-black focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+          style={{ marginBottom: '5px', padding: '5px', border: '1px solid black' }}
         />
+        <br />
         <input
           type="password"
           placeholder="Password"
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
-          className="p-3 border border-gray-400 rounded-lg bg-gray-200 text-black focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+          style={{ marginBottom: '5px', padding: '5px', border: '1px solid black' }}
         />
+        <br />
         <select
           value={newRole}
           onChange={(e) => setNewRole(e.target.value)}
-          className="p-3 border border-gray-400 rounded-lg bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-orange-500"
+          style={{ marginBottom: '5px', padding: '5px', border: '1px solid black' }}
         >
           <option value="shopper">Shopper</option>
           <option value="seller">Seller</option>
           <option value="admin">Admin</option>
         </select>
+        <br />
         <button 
           onClick={handleAddUser}
-          className="bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition duration-300 ease-in-out w-full"
+          style={{ backgroundColor: '#007BFF', color: 'white', padding: '5px', border: '1px solid black' }}
         >
           Add User
         </button>

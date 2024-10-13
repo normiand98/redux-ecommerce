@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const handleLogoutUser = () => {
     dispatch(logoutUser());
-    navigate('/');   // Redirect to home page after logout
+    navigate('/login');   // Redirect to home page after logout
   };
 
   return (
@@ -29,7 +29,6 @@ const Navbar = () => {
       width: '100%',
     }}>
       <div>
-        <Link to="/" style={{ color: '#fff', textDecoration: 'none', marginRight: '20px' }}>Home</Link>
         {currentUser && currentUser.role === 'shopper' && (
           <Link to="/cart" style={{ color: '#fff', textDecoration: 'none', marginRight: '20px' }}>Cart</Link>
         )}

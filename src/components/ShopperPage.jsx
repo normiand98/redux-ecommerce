@@ -17,7 +17,7 @@ const ShopperPage = () => {
 
   const handleAddToCart = (product) => {
     if (!currentUser) {
-      alert('Please log in to add items to your cart.');
+      alert('You are not logged in.');
       return;
     }
 
@@ -30,7 +30,7 @@ const ShopperPage = () => {
         quantity: quantityToAdd
       }));
 
-      setNotification(`Item successfully added to cart`);
+      setNotification(`Added!`);
       setTimeout(() => setNotification(''), 3000);
     } else {
       alert('This product is out of stock or has an invalid price!');
@@ -42,11 +42,11 @@ const ShopperPage = () => {
   };
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
+    <div style={{ padding: '20px', backgroundColor: '#ffffff', minHeight: '100vh' }}>
       <h1 style={{ textAlign: 'center', fontSize: '24px', marginBottom: '20px' }}>Products</h1>
 
       {notification && (
-        <div style={{ color: 'blue', marginBottom: '20px', textAlign: 'center' }}>
+        <div style={{ marginBottom: '20px', textAlign: 'center' }}>
           {notification}
         </div>
       )}
