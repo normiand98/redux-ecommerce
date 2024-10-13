@@ -1,110 +1,131 @@
-# E-commerce Website
+# E-commerce Platform
 
-This website is a fully functional e-commerce platform that supports multiple roles such as **Admin**, **Seller**, and **Shopper**. Each role has its own set of permissions and functionalities. This README file will guide you through the key features, how to set up and run the project using Gitpod, and how to interact with the app based on different roles.
+A comprehensive e-commerce platform supporting multiple user roles: **Admin**, **Seller**, and **Shopper**. Each role is equipped with distinct permissions and functionalities. This README provides an overview of key features, setup instructions for running the project on Gitpod, and guidance on interacting with the app based on different user roles.
+
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Prerequisites](#prerequisites)
+- [Setup and Running the App on Gitpod](#setup-and-running-the-app-on-gitpod)
+  - [1. Clone the Repository](#1-clone-the-repository)
+  - [2. Install Node.js](#2-install-nodejs)
+  - [3. Install npm](#3-install-npm)
+  - [4. Install MongoDB](#4-install-mongodb)
+  - [5. Install Project Dependencies](#5-install-project-dependencies)
+  - [6. Run the Frontend](#6-run-the-frontend)
+  - [7. Run the Backend](#7-run-the-backend)
+  - [8. Access the Application](#8-access-the-application)
+- [Interacting with the App](#interacting-with-the-app)
+  - [Role-Based Capabilities](#role-based-capabilities)
+  - [User Flow](#user-flow)
+- [Technologies Used](#technologies-used)
 
 ## Key Features
 
-- **Role-Based Authentication**: Users can sign in as Admins, Sellers, or Shoppers, each with specific permissions.
-  - **Admin**: Manages users.
-  - **Seller**: Can post and manage products.
-  - **Shopper**: Can browse products, add items to the shopping cart, and make purchases.
-- **Product Management**: Sellers can post new products, edit product details, and manage their listings.
-- **Shopping Cart**: Shoppers can add products to their shopping cart, review their cart, and proceed to checkout.
-- **Responsive Design**: The website is fully responsive, providing an optimal user experience on both desktop and mobile devices.
+- **Role-Based Authentication**: 
+  - **Admin**: Manage users with the ability to add, edit, delete, and update user roles.
+  - **Seller**: Post new products, edit product details, and manage product listings.
+  - **Shopper**: Browse products, add items to the shopping cart, and complete purchases.
+  
+- **Product Management**: Sellers can easily manage their product inventory, including adding new products and updating existing ones.
 
-**TAKE NOTE: THE NAVIGATION BAR IS COLLAPSED BY DEFAULT, YOU CAN OPEN IT FROM THE TOP RIGHT MENU BUTTON**
+- **Shopping Cart**: Shoppers can seamlessly add products to their cart, review their selections, and proceed to checkout.
 
 ## Prerequisites
 
-To run this project locally or in a cloud-based development environment like Gitpod, you will need the following:
+Before running the project locally or in a cloud-based environment like Gitpod, ensure you have the following installed:
 
 - **Node.js**
 - **npm** (Node Package Manager)
-- **MongoDB** (Local installation or a cloud MongoDB instance)
+- **MongoDB** (Local installation or a cloud-based MongoDB service)
 
-## How to Run the App Using Gitpod
+## Setup and Running the App on Gitpod
 
-To set up and run this project in a Gitpod workspace, follow these steps:
+Follow these steps to set up and run the project in a Gitpod workspace:
 
-1. **Clone the Repository**:
-   - In your Gitpod workspace terminal, clone the repository:
-     ```bash
-     git clone https://github.com/0xiammatrixx/redux-bounty.git
-     ```
+### 1. Clone the Repository
 
-2. **Install Node.js**:
+Open your Gitpod terminal and clone the repository:
+
+```bash
+git clone https://github.com/normiand98/redux-ecommerce.git
+```
+
+### 2. Install Node.js:
    - If Node.js is not pre-installed in your Gitpod environment, install it with:
      ```bash
      sudo apt install nodejs
      ```
 
-3. **Install npm**:
+### 3. Install npm:
    - Install npm (Node package manager) if not available:
      ```bash
      sudo apt install npm
      ```
 
-4. **Install MongoDB**:
+### 4. Install MongoDB:
    - To install MongoDB in your Gitpod environment:
      ```bash
      npm install mongodb
      ```
 
-5. **Install Project Dependencies**:
+### 5. Install Project Dependencies:
    - Navigate to the project directory and install the required dependencies:
-     ```bash
-     cd redux-bounty
+     
+```bash
+     cd redux-ecommerce
      npm install
-     ```
+```
 
-6. **Run the Frontend**:
-   - From the project root directory, start the frontend:
-     ```bash
+### 6. Run the Frontend:
+   - Start the frontend development server from the project root:
+     
+```bash
      npm run dev
-     ```
+```
 
-7. **Run the Backend**:
-   - In a new terminal, go to the `backend` directory to start the backend server:
-     ```bash
-     cd redux-bounty
+### 7. Run the Backend:
+   - Open a new terminal in Gitpod, navigate to the backend directory, and start the backend server:
+     
+```bash
+     cd redux-ecommerce
      cd backend
      npm start
-     ```
+```
 
-8. **Access the App**:
-   - Once the app is running, Gitpod will provide you with a public URL. You can access the app via that URL.
-   - Go to PORTS in your terminal area and make sure both ports are set to public
-   - Open both links, typically, your backend will run on port 5000 and your frontend will run on port 5173
-   - You can now interact with the frontend of the app.
+### 8. Access the Application:
+  - Gitpod will provide public URLs for both the frontend and backend servers.
+  - Ensure both ports are set to public in the Gitpod interface.
+  - Open both URLs in your browser to interact with the application.
 
-## How to Interact with the App
-
-### Role-Based Capabilities
-
-- **Admin**:
-  - Can manage users,
-  - Has the ability to add, edit, delete, or update any user on the platform.
-  
-- **Seller**:
-  - Can post new products, update or remove existing products.
-
-- **Shopper**:
-  - Can browse available products, add items to their shopping cart, and proceed to checkout.
-  - Can manage their cart, remove items, and view product details.
-
-### User Flow
-- **Login/Register**: Users can register as new users or log in with an existing account.
-- **Dashboard**: Upon login, users will be directed to the homepage, where they can access their role-specific dashboards (Admin, Seller, or Shopper).
-- **Shopping**: Shoppers can view product listings, view detailed product information, and add items to their cart.
-
-## Made With
-
-- **Vite**: Fast build tool and development server for frontend applications.
-- **React**: JavaScript library for building user interfaces.
-- **Redux**: State management library for managing the application state.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **MongoDB**: NoSQL database for storing data.
-- **Node.js**: JavaScript runtime for running the backend.
-- **Express**: Web framework for Node.js, used to build the backend API.
-
-
+    ## Interacting with the App
+    ### Role-Based Capabilities
+    - **Admin**:
+    User Management: Add, edit, delete, and update user roles.
+    - **Seller**:
+     Product Management: Post new products, update product details, and manage listings.
+    - **Shopper**:
+      Shopping: Browse products, add items to the cart, review the cart, and proceed to checkout.
+     - **Cart Management**:
+       Remove items and view detailed product information.
+    
+    ### User Flow
+    - **Login/Register**:
+    
+      Users can create a new account or log in with existing credentials.
+    - **Dashboard**:
+      Upon successful login, users are directed to a role-specific dashboard:
+    - **Admin**: Access to user management tools.
+    - **Seller**: Tools for managing products and listings.
+    - **Shopper**: Access to product browsing and cart functionalities.
+    - **Shopping**:
+      Shoppers can view product listings, access detailed product information, and manage their shopping cart.
+      
+    ### Technologies Used
+    - **Vite**: Fast build tool and development server for frontend applications.
+    - **React**: JavaScript library for building user interfaces.
+    - **Redux**: State management library for handling application state.
+    - **Tailwind CSS**: Utility-first CSS framework for efficient styling.
+    - **MongoDB**: NoSQL database for data storage.
+    - **Node.js**: JavaScript runtime for backend operations.
+    - **Express**: Web framework for Node.js, used to build the backend API.
